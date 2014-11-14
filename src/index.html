@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jquery Bootstrap Like Number Picker</title>
+	<link rel='stylesheet' href='spinner.css' />
+	<script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script src='spinner.js'></script>
+	<script>
+	function show_spinner_numeri(id_div){
+		dpUI.numberPicker("#"+id_div, {
+				min: 1,
+				max: 50,
+				step: 1,
+				formatter: function(x){
+					return x;
+				}
+			});
+	}
+	</script>
+</head>
+<body onLoad="show_spinner_numeri('np')">
+	<div id='np'></div>
+
+</body>
+</html>
